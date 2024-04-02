@@ -1,0 +1,118 @@
+.card {
+    display: flex;
+    background-color: var(--cor-clara);
+    border: 1px solid transparent;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px 0px #00000040;
+    margin: 0 1.5em 1.2em;
+    padding: 1em 1em 1.5em;
+    gap: 0.75em;
+}
+
+.card__estrelas {
+    width: 91px;
+    height: 15px;
+}
+
+.card__interesse {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75em;
+}
+
+.card__interesse-titulo {
+    font-weight: 700;
+    line-height: 24px;
+    color: var(--letra-destaque);
+}
+
+.card__interesse-angular {
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--cor-escura);
+}
+
+.card__interesse-paragrafo {
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.card__angular {
+    display: flex;
+    flex-direction: column;
+    gap: 2.25em;
+    text-align: center;
+}
+
+.card__angular-buttom {
+    font-weight: 700;
+    line-height: 24px;
+
+    border: 1px solid transparent;
+    background-color: var(--letra-destaque);
+    color: var(--cor-clara);
+    text-decoration: none;
+    width: 100%;
+    height: 10%;
+    padding: 0.85em 0 0.85em;
+    margin: 0 0 0.85em;
+}
+
+@media screen and (min-width: 1024px) {
+    .card {
+        margin: 0 13.6rem 3rem;
+        padding: 1.5rem 1.5rem 0.5rem 1rem;
+        justify-content: space-between;
+    }
+
+    .card__estrelas {
+        width: 91px;
+        height: 15px;
+        top: 23px;
+        left: 18px;
+    }
+
+    .card__interesse-titulo {
+        width: 100%;
+    }
+
+    .card__interesse-paragrafo {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .card__interesse-links {
+        margin: 3.5rem 0 0;
+    }
+
+    .card__angular {
+        gap: 1.5rem;
+        text-wrap: nowrap;
+    }
+
+    .card__angular-buttom {
+        padding: 1rem 2.1rem;
+        width: auto;
+    }
+}
+
+@media screen and (min-width: 1728px) {
+    .card {
+        width: 35%;
+        height: 50%;
+        margin: 7.125rem 0;
+    }
+
+    .card__interesse-titulo {
+        font-size: 32px;
+        line-height: 48px;
+    }
+
+    .card__interesse-angular {
+        line-height: 27px;
+    }
+
+    .card__interesse-links {
+        margin: 0;
+    }
+}

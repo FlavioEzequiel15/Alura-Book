@@ -1,0 +1,78 @@
+.footer {
+    padding: 1em 0 1.5em 1.5em;
+    border-top: 1px solid black;
+}
+
+.footer__text {
+    line-height: 24px;
+    text-decoration: none;
+    color: black;
+}
+
+.footer__grupos-alura{
+    display: none;
+}
+
+@media screen and (min-width: 1024px) {
+    .footer {
+        display: flex;
+        flex-direction: row;
+        padding: 3.5em 3.75em 4.375em 1.5em;
+        gap: 6.625em;
+        justify-content: center;
+    }
+
+    .footer__text {
+        font-size: 24px;
+        line-height: 36px;
+        text-wrap: nowrap;
+        color: var(--preto);
+    }
+    
+    .footer__grupos-alura {
+        display: flex;
+        gap: 3.75em;
+    }
+
+    .footer__grupos-divisões {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    .footer__grupos-titulo {
+        margin-bottom: 0.5rem;
+        font-size: 14px;
+        line-height: 21px;
+        color: var(--cor-titulo-claro);
+    }
+
+    .footer__grupos-items {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .footer__grupos-links {
+        text-decoration: none;
+        font-size: 14px;
+        line-height: 21px;
+        color: var(--cor-texto-claro);
+    }
+}
+
+@media screen and (min-width: 1728px) {
+    .footer {
+        background-color: var(--background-footer-descktop);
+    }
+
+    .footer__text {
+        padding-left: 13.25rem;
+    }
+
+    .footer__grupos-educacao, .footer__grupos-online, .footer__grupos-comunidade {
+        border-left: 1px solid var(--preto);
+        padding: 0 10rem 0 1.25rem;
+    }
+}

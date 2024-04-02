@@ -1,0 +1,208 @@
+.cabecalho {
+    background-color: var(--cor-clara);
+    display: flex;
+    justify-content: space-between;
+
+    align-items: center;
+    position: relative;
+}
+
+.cabacalho__container-hanburguer {
+    display: flex;
+    gap: 1.5em;
+}
+
+.cabecalho__hanburguer-botao {
+    display: none;
+}
+
+.cabecalho__hanburguer-checkbox {
+    width: 34px;
+    height: 24px;
+    background-image: url(/assets/Menu.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+    margin: 1.2em 0 1em 1.875em;
+}
+
+.cabecalho__logo-alura {
+    margin: 1.2em 0 1em;
+}
+
+.hanburguer__imagem-icones {
+    width: 40px;
+    height: 40px;
+}
+
+.hanburguer__menu {
+    display: none;
+    position: absolute;
+    top: 80%;
+    width: 70vw;
+    left: 0;
+    z-index: 1;
+}
+
+.hanburguer__menu-item:active {
+    background: var(--cor-escura);
+}
+.hanburguer__menu-item:active > .hanburguer__menu-link {
+    -webkit-text-fill-color: var(--cor-clara);
+    text-decoration: none;
+}
+
+.cabecalho__hanburguer-botao:checked~ .hanburguer__menu {
+    display: block;
+}
+
+.cabecalho__hanburguer-botao:checked ~ .cabecalho__menu-checked > .cabecalho__hanburguer-checkbox {
+    background-image: url(/assets/Menu\ Aberto.svg);
+    background-color: var(--cor-escura);
+    padding: 1.5em 1.375em;
+    margin: 0;
+}
+
+.hanburguer__menu-titulo, .hanburguer__menu-item {
+    background-color: var(--cor-clara);
+    padding: 1em 0 1em 1.5em;
+}
+
+.hanburguer__menu-titulo {
+    color: var(--letra-destaque);
+}
+
+.hanburguer__menu-link {
+    color: var(--cor-escura);
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.cabecalho__links {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    margin-right: 2em;
+}
+
+.hanburguer__menu-item:hover {
+    background: var(--cor-escura);
+}
+.hanburguer__menu-item:hover > .hanburguer__menu-link {
+    -webkit-text-fill-color: var(--cor-clara);
+    text-decoration: none;
+}
+
+.hanburguer__logo-titulo {
+    display: none;
+}
+
+.opcoes {
+    display: none;
+}
+
+.cabecalho__links-nome {
+    display: none;
+}
+
+@media screen and (min-width: 1024px) {
+    .cabecalho__hanburguer-checkbox {
+        display: none;
+    }
+
+    .hanburguer__logo-negrito {
+        font-weight: 700;
+    }
+
+    .hanburguer__logo-titulo {
+        font-family: var(--fonte-secundaria);
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 30px;
+        display: block;
+        padding: 0.4em 0 0;
+        margin-top: 1rem;
+    }
+
+    .opcoes {
+        display: flex;
+        gap: 2em;
+        margin: 0 0 0 3em;
+        align-items: center;
+    }
+
+    .opcoes__botao {
+        display: none;
+    }
+
+    .opcoes__items {
+        text-transform: uppercase;
+    }
+
+    .opcoes__links {
+        font-family: var(--fonte-padrao);
+        font-weight: 400;
+        line-height: 24px;
+        color: var(--preto);
+        text-decoration: none;
+    }
+
+    .hanburguer__menu {
+        left: auto;
+        width: auto;
+    }
+
+    .opcoes__botao:checked~.hanburguer__menu {
+        display: block;
+    }
+
+    .opcoes__botao:checked ~ .cabecalho__opcoes > .cabecalho__opcoes-checked {
+        background-color: var(--cor-escura);
+        color: var(--cor-clara);
+        padding: 0.625em;
+        margin: 0;
+    }
+
+    .hanburguer__menu-item {
+        padding: 1.5em;
+    }
+    
+    .hanburguer__menu-link {
+        line-height: 24px;
+    }
+
+    .cabecalho__links {
+        margin: 0 3em 0 0;
+        gap: 3.75em;
+    }
+
+    .container__imagem-sumir {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1728px) {
+    .cabecalho {
+        justify-content:flex-start ;
+    }
+
+    .opcoes {
+        justify-content: start;
+        width: 68%;
+    }
+
+    .cabecalho__links-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-decoration: none;
+    }
+
+    .cabecalho__links-nome {
+        display: block;
+        font-size: 20px;
+        line-height: 30px;
+        color: var(--preto);
+        text-wrap: nowrap;
+    }
+}
