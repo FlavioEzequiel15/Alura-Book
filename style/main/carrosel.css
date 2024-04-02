@@ -28,6 +28,10 @@
     display: none;
 }
 
+.nextEl, .prevEl {
+    display: none;
+}
+
 @media screen and (min-width: 1024px) {
     .carrosel__titulo {
         font-size: 26px;
